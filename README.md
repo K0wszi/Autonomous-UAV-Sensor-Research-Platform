@@ -1,20 +1,18 @@
 # Autonomous-UAV-Sensor-Research-Platform
-Platforma badawcza do analizy sensorów zbliżeniowych w różnych warunkach lotu. Projekt wykonywany w ramach pracy magisterskiej
-Celem projektu jest zaprojektowanie, budowa oraz oprogramowanie autonomicznej platformy latającej (UAV), służącej jako mobilne stanowisko badawcze. Projekt skupia się na analizie porównawczej trzech technologii detekcji przeszkód: laserowej (ToF), ultradźwiękowej oraz podczerwieni (IR) w różnych warunkach operacyjnych, uwzględniających wibracje, przechyły oraz zakłócenia elektromagnetyczne.
-Kontroler Lotu (FC): Stack T-Motor Velox F7 SE pracujący pod kontrolą oprogramowania ArduPilot, odpowiedzialny za stabilizację i nawigację GPS (Beitian BN-880).
+The goal of the project is the design, construction, and software development of an autonomous Unmanned Aerial Vehicle (UAV) to serve as a mobile research testbed. The project focuses on a comparative analysis of three obstacle detection technologies: laser (ToF), ultrasonic, and infrared (IR) under various operational conditions, taking into account vibrations, attitude changes (tilt), and electromagnetic interference.
 
-Companion Computer (ESP32): Mikrokontroler pełniący rolę jednostki badawczej. Odpowiada za akwizycję danych z sensorów oraz komunikację z FC poprzez protokół MAVLink (UART).
+Hardware Configuration
 
-Metodologia Badań
+Flight Controller (FC): T-Motor Velox F7 SE Stack running ArduPilot firmware, responsible for stabilization and GPS navigation (Beitian BN-880).
 
-Badanie polega na autonomicznych misjach lotniczych w kierunku ściany testowej pokrytej różnymi materiałami. Algorytm zaimplementowany na ESP32 realizuje pętlę sterowania:
+Companion Computer (ESP32): A microcontroller acting as the primary research unit. It is responsible for sensor data acquisition and communication with the FC via the MAVLink protocol (UART).
 
-Ciągły odczyt danych z sensorów: TF-Luna (LIDAR), HC-SR04 (Ultradźwięki), Sharp GP2Y0A21YK (IR).
+Research Methodology The study involves autonomous flight missions directed towards a test wall covered with various materials. The algorithm implemented on the ESP32 executes a control loop consisting of:
 
-Analiza sygnału w czasie rzeczywistym.
+Continuous data acquisition from sensors: TF-Luna (LIDAR), HC-SR04 (Ultrasonic), and Sharp GP2Y0A21YK (IR).
 
-W momencie detekcji przeszkody: zatrzymanie pomiaru czasu i wysłanie komendy RTL (Return to Launch) do kontrolera lotu, inicjującej bezpieczny powrót drona.
+Real-time signal analysis.
 
- Konstrukcja Mechaniczna
+Upon obstacle detection: stopping the time measurement and sending an RTL (Return to Launch) command to the flight controller to initiate a safe return of the drone.
 
-Projekt integruje gotowe elementy z włókna węglowego z autorskimi częściami zaprojektowanymi w Fusion 360 i wydrukowanymi w technologii FDM (PETG). Obejmuje to modułowy panel sensorów, maszt GPS oraz dedykowane "piętro" dla elektroniki badawczej, zaprojektowane w celu optymalizacji środka ciężkości (CoG) i minimalizacji wpływu wibracji na pomiary.
+Mechanical Design The design integrates off-the-shelf carbon fiber components with custom parts designed in Fusion 360 and manufactured using FDM 3D printing technology (PETG). This includes a modular sensor panel, a GPS mast, and a dedicated "deck" for the research electronics, designed to optimize the Center of Gravity (CoG) and minimize the impact of vibrations on measurements.
