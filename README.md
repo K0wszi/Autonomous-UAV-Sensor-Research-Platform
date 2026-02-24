@@ -16,3 +16,4 @@ Real-time signal analysis.
 Upon obstacle detection: stopping the time measurement and sending an RTL (Return to Launch) command to the flight controller to initiate a safe return of the drone.
 
 Mechanical Design The design integrates off-the-shelf carbon fiber components with custom parts designed in Fusion 360 and manufactured using FDM 3D printing technology (PETG). This includes a modular sensor panel, a GPS mast, and a dedicated "deck" for the research electronics, designed to optimize the Center of Gravity (CoG) and minimize the impact of vibrations on measurements.
+<img width="2048" height="1244" alt="image" src="https://github.com/user-attachments/assets/2f4af472-efdb-447c-98cd-f3482a050ed0" />
